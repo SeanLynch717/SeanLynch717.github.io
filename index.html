@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sean Lynch's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="navbar">
+            <a class="navItem" href="#contact">Contact Me!</a>
+            <a class="navItem" href="#resume">Resume</a>
+            <a class="navItem" href="#projects">Projects</a>
+            <a class="navItem" href="#startAnimation">Home</a>
+        </div>
+        <header>
+            <div id="startAnimation">
+                <h2>Hey! I'm</h2>
+                <h1>Sean Lynch</h1>
+                <h3>
+                        <!-- Third year Game Design & Development student at RIT with experience working on an
+                        Agile Software Development team. Having been diagnosed with Tourette Syndrome at a very
+                        young age, I have learned how to overcome seemingly insurmountable obstacles.
+                        I am no longer afraid of what makes me different and aim to use my unique life
+                        experiences to develop incredible technologies that kids similar to me can turn
+                        to for inspiration and motivation in the face of adversity. -->
+                        Software Engineer @ Zynga.
+            </div>
+        </header>
+        <main>
+            <div class ="headerText">
+                <h1>Projects</h1>
+            </div>
+            <div id="projects">
+                <div class="projectContainer">
+                    <h2>Recursive Portals</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/portals.png">
+                            <br>
+                            <img src="images/portals2.png">
+                        </div>
+                    
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> This project aims to explore the rendering techniques used in game franchises such as Portal using DirectX 11 and c++.
+                                <br><br>
+                                <a href="https://github.com/SeanLynch717/Recursive_Portals">Github</a>
+                            </p>
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li>Leveraged DirectX math libraries to compute: 
+                                    <ol> 
+                                        <li>The view matrix of the virtual camera.</li>
+                                        <li>The position of the camera as seen through the out portal.</li>
+                                        <li>The oblique clipped projection matrix. This ensures that the near plane is aligned with the plane the portal is on.</li>
+                                    </ol>
+                                </li>
+                                <li>Read/Write portals to the stencil buffer to accomplish recursive rendering.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>Recon-87</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/projectm2.png">
+                            <br>
+                            <img src="images/projectm3.png">
+                        </div>
+                    
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> Recon 87 is a 2D Metroidvania style game with an emphasis on exploring humanity's
+                                expansion into the galaxy.
+                                Play as ARC trooper Adam who is forced to harness the power of ancient
+                                alien relics to stop those in NOVA who seek to dominate humanity and beyond.
+                                <br><br>
+                                <a href="https://github.com/maybeagithub/Project_Recon">Github</a>
+                            </p>
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li>Designed a custom physics scripts in order to implement player movement, jumping, crouching,
+                                    running, ledge grabbing, slope physics, and melee and ranged projectile mechanics.</li>
+                                <li>Implemented a camera system akin to the classic, Super Metroid.</li>
+                                <li>Smart collisions using entities future position, and obstacle avoidance for Enemy AI.</li>
+                                <li>Created a snappy inventory system to support the many equipment and skill upgrades that can be
+                                    applied to
+                                    Adam.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>UFO's Don't Land</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/proceduralLit.png">
+                            <br>
+                            <img src="images/ufogameplay.png">
+                        </div>
+                    
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> UFO's Don't Land is an anagram for the 2021 Global Game Jam's theme "Lost and Found".
+                                In this game your character was killed in an intergalactic space accident involving an alien UFO ship.
+                                You awake in a procedurally generated dungeon filled with alien monsters and must utilize objects in your environment to slay these enemies.
+                                Get to the end of the dungeon and you may just find yourself a second chance at life.
+                                <br><br>
+                                <a href="https://github.com/treecone/UfosDontLand">Github</a>
+                            </p>
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li> Wrote a script to procedurally generate the layout of the dungeon where each floor gets progressively more complex,
+                                     all the while guaranteeing a final boss room.</li>
+                                <li> Created spawn points for items and enemy locations, and implemented a rarity system
+                                     that affects their probability of appearing.</li>
+                                <li> Designed a fluent camera system to support multiple players on a single screen, and transitioning from one room to the next.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>Riptide</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/riptideMenu.png">
+                            <br>
+                            <img src="images/riptide.png">
+                        </div>
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> Riptide is a mobile game where the player finds themselve sailing around the vast oceans of
+                                a Chinese inspired region.
+                                There the player will battle several monsters and enemies inspired by chinese mythology in
+                                order to gather resources to
+                                upgrade the ships abilities. The group partnered with
+                                RIT's Magic Maker program June - August 2020.
+                                <br><br>
+                                Coming soon to Android!
+                                <br><br>
+                                <a href="https://github.com/treecone/ProjectRiptide">Github</a>
+                            </p>
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li>Worked on custom physics of ship movement and steering.</li>
+                                <li>Wrote a script that builds the world from a text file and loads it in dynamically as the
+                                    player sails around, only loading structures and enemies visible to the player.
+                                </li>
+                                <li>Improved enemy and boss encounters by balancing cannon fire-rate, damage, and effect duration.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>C-Sim</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/C-SimStart.png">
+                            <br>
+                            <img src="images/C-Sim.png">
+                        </div>
+                    
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> C-Sim is a covid data visualizer and simulator. It takes live data from the CDC and uses it to simulate the spread 
+                                of covid, taking various factors into account. The users can change numerous variables that affect the spread of covid 
+                                and view data on the epidemic.
+                                <br><br>
+                                Click <a href="https://zytion-levin.itch.io/c-sim">here</a> to play.
+                            </p>
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li> Randomly generated starting positions for homes within the bounds of the simulation, and the number of residents per household
+                                    as well as their age, and gender.</li>
+                                <li> Programmed the autonomous agents to move between their house and other points of interest, and social distancing based on
+                                      the various input.
+                                </li>
+                                <li> Created hospitals that serve as testing sites. If tested positive, they along with the rest of their household
+                                    must return home to quarentine until they have all recovered.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>Double Pendulum</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/doublePendulum.PNG">
+                            <br>
+                            <img src="images/manyPendulums.PNG">
+                        </div>
+                    
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> In this simulation you can play around with all the variables that effect the trajectory of a double
+                                pendulum. Drag anywhere on the screen to adjust
+                                the position of the double pendulum, and click start to watch it go! If you take a look to the sliders section, you can adjust the
+                                mass and length of the pendulum, as well as the gravity and dampening. Once you've played around 
+                                with a single double pendulum, I encourage you to experiment with adding more. Have fun!
+                                <br><br>
+                                Click <a href="https://people.rit.edu/sdl1585/330/Projects/DoublePendulum/">here</a> to view.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>Gobblet</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/gobblet.png">
+                        </div>
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> This initially started as a class project for RIT's Intro to Game Web Tech. It slowly turned
+                                into a passion project
+                                due to my interest in game theory and studying various algorithms associated with it.
+                                I implemented the Minimax algorithm for optimal decision making and used
+                                alpha-beta pruning to increase performance at run time. The AI maxizes each play by
+                                observing all possible outcomes several turns down
+                                the road and picking the move that results in the best outcome.
+                                <br>
+                                <br>
+                                Click
+                                <a href="https://people.rit.edu/sdl1585/235/Project3/project.html">here</a> to play.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>Re-Pear</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <!-- <img src="images/mainmenu.png">
+                            <br> -->
+                            <img src="images/RePearGameplay.png">
+                        </div>
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> In this game, you find yourself as a pear in a world where pears are being marginalized
+                                and even executed. Your job is to repair your fallen pear brethren and take control of
+                                the land once again. You will need to fight off evil pear eating creatures such as a bunny,
+                                a fox, and even a bear. Lastly, once the pear army is strong enough, take down the pear hating
+                                mongerer himself.... the farmer.
+                                <br>
+                                <br>
+                                <a href="https://sean-lynch.itch.io/re-pear">Itch.io</a>
+                            </p>
+                        
+                            <h3>Role-Specific Tasks</h3>
+                            <li>
+                                Programmed pear movement including launching the horde at enemies and the ability
+                                to toggle between moving as a single pear, or as a group.
+                            </li>
+                            <li>
+                                Implemented a flocking algorithm for the horde of pears using seperation, alignment, and coehesion.
+                            </li>
+                            <li>
+                                Custom camera script accounting for the irregular geometry and movement of the pear.
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectContainer">
+                    <h2>GSR Data Extraction</h2>
+                    <div class="projectContent">
+                        <div class="pictureContainer">
+                            <img src="images/gsr.png">
+                        </div>
+                        <div class="projectText">
+                            <h3>Description</h3>
+                            <p> Worked with a psychology professor at Suny Geneseo to help increase efficiency of data collection and
+                                processing.
+                                Subjects in this experiment are asked to place monetary bets on card games, while every tenth of a
+                                second
+                                their
+                                electrodermal activity is measured.
+                                <br>
+                                The hypothesis is as follows: if there is
+                                a large flux in electrodermal activity (physiological reactivity), then that correlates to a higher
+                                stress
+                                level and an overall worse performance.
+                                <br><br>
+                                <a href="https://github.com/SeanLynch717/GSR_Data_Extraction">Github</a>     
+                            </p>
+
+                            <h3>Role-Specific Tasks</h3>
+                            <ul>
+                                <li>I created a Windows Form Application in C# that parses thousands of lines of electrodermal activity
+                                    from an excel file and calculates the subjects physiological reactivity in 10 second intervals.
+                                </li>
+                                <li>
+                                    Data is processed neatly into an excel file for easy viewing.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headerText">
+                <h1>Resume</h1>
+            </div>
+
+            <div id="resume">
+                <div id="resumeText">
+                    <h2>Click <a href="images/resume.pdf">here</a> to view.</h2>
+                    <object width="600" height="700" type="application/pdf" data="images/resume.pdf">
+                        <p>Sorry! There are issues loading Sean's resume at the moment. You can check his linked in profile to view it now.</p>
+                        <br>
+                        <p>linkedin.com/in/SeanLynch7</p>
+                    </object>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id = "legal">
+                <h2>Legal</h2>
+                <br>
+                Copyright @ 2020 - 2022
+                <br>
+                All rights reserved.
+            </div>
+            <div id="contactWrapper">
+                <div id="contactText">
+                    You can contact me here!
+                </div>
+                <div id="contact">
+                    <div id="instagramContainer">
+                        <a href="https://www.instagram.com/sean_lynch717/"><img src="images/instagram.png" alt="instagram"></a>
+                    </div>
+                    <div id="twitterContainer">
+                        <a href="https://twitter.com/Seanlynch717"><img src="images/twitter.png" alt="twitter"></a>
+                    </div>
+                    <div id="faceBookContainer">
+                        <a href="https://www.facebook.com/sean.lynch.96930/"><img src="images/facebook.png" alt="facebook"></a>
+                    </div>
+                    <div id="linkedInContainer">
+                        <a href="https://www.linkedin.com/in/seanlynch7/"><img src="images/linkedIn.png" style = "margin-right: 0;"alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
