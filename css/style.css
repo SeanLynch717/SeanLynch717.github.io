@@ -1,43 +1,79 @@
-*{
+* {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-html, body {
+
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
-#container{
+
+#container {
     position: relative;
 }
-#startAnimation{
-    background-image: url("../images/me.png");
+
+#startAnimation {
+    background-color: #222222;
 }
-header h2{
+
+/* Container holds the spot on the screen */
+.intro-content {
+    display: flex;
+    align-items: center;
     position: absolute;
-    font-size: 70px;
+    top: calc(15vh);
+    left: calc(30vw);
+}
+
+/* The image stays relatively positioned within the flex box */
+#self-portrait {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #88c9a1;
+    margin-right: 2rem;
+    z-index: 2;
+    /* Keeps image above text if they overlap */
+}
+
+/* The text container acts as the 'anchor' for the absolute headers */
+.intro-text {
+    position: relative;
+    width: 500px;
+    /* Give it space to move within */
+    height: 300px;
+}
+
+/* Reverting headers to absolute so your JS 'left' properties work again */
+.intro-text h2,
+.intro-text h1,
+.intro-text h3 {
+    position: absolute;
     color: white;
-    top: calc(100vh/2 - 16rem);
-    right: calc(100vw/2 - 4.5rem);
-    font-weight: 400;
+    white-space: nowrap;
+    /* Prevents text from wrapping while moving */
 }
-header h1{
-    position: absolute;
+
+.intro-text h2 {
     font-size: 70px;
-    color: white;
-    top: calc(100vh/2 - 12rem);
-    left: calc(100vw/2 - 10rem);
-    font-weight: 400;
+    top: 40px;
 }
-header h3{
-    position: absolute;
+
+.intro-text h1 {
+    font-size: 70px;
+    top: 100px;
+}
+
+.intro-text h3 {
     font-size: 25px;
-    color:#ccc;
-    top: calc(100vh/2 - 5rem);
-    left: 100px;
-    max-width: 750px;
+    color: #ccc;
+    top: 200px;
 }
-#navbar{
-    display: flex; 
+
+#navbar {
+    display: flex;
     flex-direction: row-reverse;
     padding: 1rem 0 1rem 0;
     position: fixed;
@@ -45,55 +81,65 @@ header h3{
     width: 100%;
     z-index: 1;
 }
-#navbar a{
+
+#navbar a {
     text-align: center;
     color: white;
     width: 13rem;
     padding: 1rem 0;
     font-size: 1.5rem;
 }
-#navbar a:hover{
+
+#navbar a:hover {
     color: yellow;
 }
-#navbar a:link{
+
+#navbar a:link {
     text-decoration: none;
 }
-#home{
+
+#home {
     font-size: 30px;
     text-align: center;
     padding: 5rem 12rem 5rem 12rem;
     background-image: url("../images/yellowSparkle.jpg");
     background-size: contain;
 }
-#homeText{
-    background-color:#CAE9FF;
+
+#homeText {
+    background-color: #CAE9FF;
     background-size: cover;
     -moz-box-shadow: 0 0 5px #999;
     -webkit-box-shadow: 0 0 5px #999;
     box-shadow: 0 0 50px #999;
 }
-#homeText h2{
+
+#homeText h2 {
     font-size: 2rem;
 }
-#homeText p{
+
+#homeText p {
     font-size: 1.5rem;
 }
-.headerText{
+
+.headerText {
     text-align: center;
     background-color: #053225;
     padding: 1rem 0 2rem 0;
-    color:white;
+    color: white;
     font-size: 25px;
 }
-#projects{
+
+#projects {
     /* background-image: url("../images/yellowTriangle.jpg"); */
     background-color: #e9f5eb;
-    padding:5rem 12rem;
+    padding: 5rem 12rem;
     display: flex;
     flex-direction: column;
 
 }
-.projectContainer{
+
+.projectContainer {
     margin-bottom: 4rem;
     background-color: #88c9a1;
     -moz-box-shadow: 0 0 5px #999;
@@ -101,44 +147,54 @@ header h3{
     box-shadow: 0 0 20px #999;
     border-radius: 20px;
 }
-.projectContent{
-    display: flex; 
+
+.projectContent {
+    display: flex;
     margin: 0 50px;
     padding-bottom: 50px;
 }
-.pictureContainer{
+
+.pictureContainer {
     margin: 13px 20px 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.projectContainer h2{
+
+.projectContainer h2 {
     text-align: center;
     font-size: 45px;
     margin: 0 50px 10px 50px;
     border-bottom: 5px solid #053225;
 }
-.projectContainer h3{
+
+.projectContainer h3 {
     font-size: 30px;
     margin-left: 10px;
 }
-.pictureContainer img{
-    border: 4px #053225 solid; 
+
+.pictureContainer img {
+    border: 4px #053225 solid;
     width: 500px;
 }
-.pictureItem{
-    margin:  1rem;
+
+.pictureItem {
+    margin: 1rem;
 }
-.projectText{
+
+.projectText {
     margin: 10px 0 0 0;
     background-color: #f8f8f0;
     border-radius: 10px;
 }
-.projectText p, li{
+
+.projectText p,
+li {
     margin: 20px;
     font-size: 20px;
 }
-#resume{
+
+#resume {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -147,7 +203,8 @@ header h3{
     background-color: #e9f5eb;
     background-size: cover
 }
-#resumeText{
+
+#resumeText {
     background-color: #d8f1e1;
     border-radius: 20px;
     padding: 30px;
@@ -156,16 +213,19 @@ header h3{
     text-align: center;
     box-shadow: 5px 5px 5px #333;
 }
+
 label {
-    display:block;
-    margin-top:20px;
-    letter-spacing:2px;
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 2px;
 }
-footer{   
+
+footer {
     background-color: #053225;
     height: 170px;
 }
-#legal{
+
+#legal {
     color: white;
     font-size: 22px;
     text-align: center;
@@ -173,28 +233,34 @@ footer{
     right: 200px;
     margin-top: 10px;
 }
-#contactWrapper{
+
+#contactWrapper {
     display: flex;
     flex-direction: column;
 }
-#contactWrapper div{
+
+#contactWrapper div {
     width: 30%;
 }
-#contact{
+
+#contact {
     display: flex;
     margin-left: 200px;
     justify-content: space-between;
 }
-#contact div{
+
+#contact div {
     width: auto;
     margin-top: 45px;
     width: 70px;
 }
-#contact img{
+
+#contact img {
     width: 100%;
 }
-#contactText{
-    color:white;
+
+#contactText {
+    color: white;
     font-size: 25px;
     text-align: center;
     margin-left: 200px;
@@ -202,8 +268,8 @@ footer{
 }
 
 /* large screen size */
-@media screen and (max-width: 1500px){
-    #projects{
+@media screen and (max-width: 1500px) {
+    #projects {
         padding: 5rem;
     }
 }
@@ -211,77 +277,92 @@ footer{
 
 
 /* Change to "mobile" display when the screen width is less than 720px */
-@media screen and (max-width:980px){
-    header h2{
+@media screen and (max-width:980px) {
+    header h2 {
         font-size: 20px;
         top: 150px;
     }
-    header h1{
+
+    header h1 {
         font-size: 20px;
         top: 170px;
     }
-    header h3{
+
+    header h3 {
         font-size: 10px;
         top: 200px;
     }
-    #navbar{
+
+    #navbar {
         justify-content: space-evenly;
     }
-    .headerText{
+
+    .headerText {
         font-size: 20px;
     }
-    .projectContent div{
+
+    .projectContent div {
         width: 50%;
     }
-    .pictureContainer{
+
+    .pictureContainer {
         width: 100%;
     }
-    .pictureContainer img{
+
+    .pictureContainer img {
         width: calc(100% - 6px);
     }
-    .projectText{
+
+    .projectText {
         text-align: center;
     }
-    .projectContainer h2{
+
+    .projectContainer h2 {
         font-size: 35px;
     }
-    .projectText p, li{
+
+    .projectText p,
+    li {
         font-size: 10px;
     }
-    .projectText h3{
+
+    .projectText h3 {
         font-size: 20px;
     }
-    #contactWrapper{
+
+    #contactWrapper {
         align-items: center;
     }
-    #contact{
+
+    #contact {
         margin: 0;
         justify-content: space-around;
         margin-bottom: 40px;
     }
-    #contact div{
+
+    #contact div {
         margin: 0;
     }
-    #contactText{
+
+    #contactText {
         margin: 0 0 10px 0;
     }
-    #contact img{
+
+    #contact img {
         width: 50px;
         margin: 0;
     }
-    #legal{
+
+    #legal {
         font-size: 18px;
         right: auto;
         position: relative;
         margin: 0 0 20px 0;
     }
-    footer{
+
+    footer {
         height: 310px;
         display: flex;
         flex-direction: column-reverse;
     }
 }
-
-
-
-
