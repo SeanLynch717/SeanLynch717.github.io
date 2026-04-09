@@ -43,8 +43,6 @@ function startAnimation() {
 }
 
 function resize() {
-    introContainer.style.height = "calc(50vh)";//
-
     introContainer.style.backgroundSize = "100vw, calc(100vw * 1069 / 1920)";
 }
 

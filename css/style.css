@@ -14,6 +14,7 @@ body {
 }
 
 #startAnimation {
+    height: calc(50vh);
     background-color: #222222;
 }
 
@@ -278,6 +279,35 @@ footer {
 
 /* Change to "mobile" display when the screen width is less than 720px */
 @media screen and (max-width:980px) {
+    #startAnimation {
+        height: calc(20vh);
+    }
+
+    .intro-content {
+        top: calc(4vh);
+        left: calc(15vw);
+    }
+
+    .intro-text h2 {
+        font-size: 40px;
+        top: 70px;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+        top: 120px;
+    }
+
+    .intro-text h3 {
+        font-size: 20px;
+        top: 200px;
+    }
+
+    #self-portrait {
+        width: 150px;
+        height: 150px;
+    }
+
     header h2 {
         font-size: 20px;
         top: 150px;
