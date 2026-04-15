@@ -29,6 +29,7 @@ body {
 
 /* The image stays relatively positioned within the flex box */
 #self-portrait {
+    position: relative;
     width: 300px;
     height: 300px;
     object-fit: cover;

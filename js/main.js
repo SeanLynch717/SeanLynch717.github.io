@@ -33,9 +33,9 @@ function startAnimation() {
     str1 = textContainer.querySelector("h2");
     str2 = textContainer.querySelector("h1");
     str3 = textContainer.querySelector("h3");
-    str1.style.left = window.innerWidth + "px";
-    str2.style.left = window.innerWidth + "px";
-    str3.style.left = -950 + "px";
+    // str1.style.left = window.innerWidth + "px";
+    // str2.style.left = window.innerWidth + "px";
+    // str3.style.left = -10000 + "px";
     portrait = introContainer.querySelector("#self-portrait");
     resize();
     window.scrollTo(0, 0);
@@ -114,22 +114,18 @@ function bringNavBarUp() {
 
 function moveWords() {
     let moveRightPosition = window.innerWidth;
-    let moveLeftPosition = -950;
+    let moveLeftPosition = -window.innerWidth;
+    let topPosition = -600;
+    let topDone = false;
     let leftDone = false;
     let rightDone = false;
-    let opacityDone = false;
     let threshold = 0;
-    let imageOpacity = 0;
-    portrait.style.opacity = imageOpacity;
+    let multiplier = (window.innerWidth / window.innerHeight) / (1920 / 1080);
     let timer = setInterval(function () {
         window.scrollTo(0, 0);
-        moveLeftPosition += 10;
-        moveRightPosition -= 17;
-        imageOpacity += 0.004;
-        if (imageOpacity > 1) {
-            portrait.style.opacity = 1;
-            opacityDone = true;
-        }
+        moveLeftPosition += 15 * multiplier;
+        moveRightPosition -= 15 * multiplier;
+        topPosition += 5;
         if (moveLeftPosition >= threshold) {
             moveLeftPosition = threshold;
             str3.style.left = threshold + 'px';
@@ -141,15 +137,20 @@ function moveWords() {
             str2.style.left = threshold + 'px';
             rightDone = true;
         }
-        if (!opacityDone) {
-            portrait.style.opacity = imageOpacity;
+        if (topPosition >= threshold) {
+            topPosition = threshold;
+            portrait.style.top = threshold + 'px';
+            topDone = true;
         }
         if (!rightDone)
             str1.style.left = moveRightPosition + 'px';
         str2.style.left = moveRightPosition + 'px';
         if (!leftDone)
             str3.style.left = moveLeftPosition + 'px';
-        if (leftDone && rightDone && opacityDone) {
+        if (!topDone) {
+            portrait.style.top = topPosition + 'px';
+        }
+        if (leftDone && rightDone && topDone) {
             clearInterval(timer);
             dropNavBarDown();
         }
