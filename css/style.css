@@ -30,8 +30,8 @@ body {
 /* The image stays relatively positioned within the flex box */
 #self-portrait {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #88c9a1;
@@ -267,6 +267,12 @@ footer {
     text-align: center;
     margin-left: 200px;
     margin-top: 10px;
+}
+@media screen and (min-width: 2000px) {
+    #self-portrait {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 /* large screen size */

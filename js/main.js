@@ -121,6 +121,7 @@ function moveWords() {
     let rightDone = false;
     let threshold = 0;
     let multiplier = (window.innerWidth / window.innerHeight) / (1920 / 1080);
+    multiplier = Math.max(0.5, multiplier);
     let timer = setInterval(function () {
         window.scrollTo(0, 0);
         moveLeftPosition += 15 * multiplier;
