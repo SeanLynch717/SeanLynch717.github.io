@@ -30,6 +30,7 @@ body {
 /* The image stays relatively positioned within the flex box */
 #self-portrait {
     position: relative;
+    top: -600px;
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -61,17 +62,20 @@ body {
 .intro-text h2 {
     font-size: 70px;
     top: 40px;
+    left: 100vw;
 }
 
 .intro-text h1 {
     font-size: 70px;
     top: 100px;
+    left: 100vw;
 }
 
 .intro-text h3 {
     font-size: 25px;
     color: #ccc;
     top: 200px;
+    left: -100vw;
 }
 
 #navbar {
